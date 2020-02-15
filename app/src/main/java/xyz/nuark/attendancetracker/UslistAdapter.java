@@ -48,6 +48,7 @@ public class UslistAdapter extends RecyclerView.Adapter<UslistAdapter.ULViewHold
     public void onBindViewHolder(@NonNull ULViewHolder holder, int position) {
         UserModel cu = userModels.get(position);
         holder.uname.setText(cu.getName());
+        holder.uname.setSelected(true);
 
         int np = holder.chip_holder.getChildCount();
         for (int ordinal : cu.getAttended()) {
